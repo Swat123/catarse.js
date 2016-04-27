@@ -71,23 +71,23 @@ window.c.ProjectDashboardMenu = ((m, _, h, I18n) => {
                             ])), (ctrl.editLinksToggle() ? m('#edit-menu-items', [
                                 m('#dashboard-links', [
                                     ((!project.is_published || project.is_admin_role) ? [
-                                        m('a#basics_link[class="' + editLinkClass + '"][href="' + editRoute + '#basics' + '"]', 'Basics'),
-                                        m('a#goal_link[class="' + editLinkClass + '"][href="' + editRoute + '#goal' + '"]', 'Financing'),
+                                        m('a#basics_link[class="' + editLinkClass + '"][href="' + editRoute + '#basics' + '"]', I18n.t('projects.dashboard_nav_links.flex.basics_tab')),
+                                        m('a#goal_link[class="' + editLinkClass + '"][href="' + editRoute + '#goal' + '"]', I18n.t('projects.dashboard_nav_links.flex.goal_tab')),
                                     ] : ''),
-                                    m('a#description_link[class="' + editLinkClass + '"][href="' + editRoute + '#description' + '"]', 'Description'),
+                                    m('a#description_link[class="' + editLinkClass + '"][href="' + editRoute + '#description' + '"]', I18n.t('projects.dashboard_nav_links.flex.description_tab')),
                                     m('a#video_link[class="' + editLinkClass + '"][href="' + editRoute + '#video' + '"]', [
-                                        'Vídeo', optionalOpt
+                                        I18n.t('projects.dashboard_nav_links.flex.video_tab'), optionalOpt
                                     ]),
-                                    m('a#budget_link[class="' + editLinkClass + '"][href="' + editRoute + '#budget' + '"]', 'Budget'),
-                                    m('a#card_link[class="' + editLinkClass + '"][href="' + editRoute + '#card' + '"]', 'Card Design'),
+                                    m('a#budget_link[class="' + editLinkClass + '"][href="' + editRoute + '#budget' + '"]', I18n.t('projects.dashboard_nav_links.flex.budget_tab')),
+                                    m('a#card_link[class="' + editLinkClass + '"][href="' + editRoute + '#card' + '"]', I18n.t('projects.dashboard_nav_links.flex.card_tab')),
                                     m('a#dashboard_reward_link[class="' + editLinkClass + '"][href="' + editRoute + '#reward' + '"]', [
-                                        'Rewards', optionalOpt
+                                        I18n.t('projects.dashboard_nav_links.flex.rewards_tab'), optionalOpt
                                     ]),
-                                    m('a#dashboard_user_about_link[class="' + editLinkClass + '"][href="' + editRoute + '#user_about' + '"]', 'About You'), (project.mode === 'flex' || (project.is_published || project.state === 'approved') || project.is_admin_role ? [
+                                    m('a#dashboard_user_about_link[class="' + editLinkClass + '"][href="' + editRoute + '#user_about' + '"]', I18n.t('projects.dashboard_nav_links.flex.about_you_tab')), (project.mode === 'flex' || (project.is_published || project.state === 'approved') || project.is_admin_role ? [
                                         m('a#dashboard_user_settings_link[class="' + editLinkClass + '"][href="' + editRoute + '#user_settings' + '"]', 'Conta'),
                                     ] : ''), (!project.is_published ? [
                                         m('a#dashboard_preview_link[class="' + editLinkClass + '"][href="' + editRoute + '#preview' + '"]', [
-                                            m('span.fa.fa-fw.fa-eye.fa-lg'), ' Preview'
+                                            m('span.fa.fa-fw.fa-eye.fa-lg'), I18n.t('projects.dashboard_nav_links.flex.preview_tab')
                                         ]),
                                     ] : '')
                                 ])
