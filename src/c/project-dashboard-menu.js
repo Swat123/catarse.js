@@ -71,19 +71,19 @@ window.c.ProjectDashboardMenu = ((m, _, h, I18n) => {
                             ])), (ctrl.editLinksToggle() ? m('#edit-menu-items', [
                                 m('#dashboard-links', [
                                     ((!project.is_published || project.is_admin_role) ? [
-                                        m('a#basics_link[class="' + editLinkClass + '"][href="' + editRoute + '#basics' + '"]', 'Básico'),
-                                        m('a#goal_link[class="' + editLinkClass + '"][href="' + editRoute + '#goal' + '"]', 'Financiamento'),
+                                        m('a#basics_link[class="' + editLinkClass + '"][href="' + editRoute + '#basics' + '"]', 'Basics'),
+                                        m('a#goal_link[class="' + editLinkClass + '"][href="' + editRoute + '#goal' + '"]', 'Financing'),
                                     ] : ''),
-                                    m('a#description_link[class="' + editLinkClass + '"][href="' + editRoute + '#description' + '"]', 'Descrição'),
+                                    m('a#description_link[class="' + editLinkClass + '"][href="' + editRoute + '#description' + '"]', 'Description'),
                                     m('a#video_link[class="' + editLinkClass + '"][href="' + editRoute + '#video' + '"]', [
                                         'Vídeo', optionalOpt
                                     ]),
-                                    m('a#budget_link[class="' + editLinkClass + '"][href="' + editRoute + '#budget' + '"]', 'Orçamento'),
-                                    m('a#card_link[class="' + editLinkClass + '"][href="' + editRoute + '#card' + '"]', 'Card do projeto'),
+                                    m('a#budget_link[class="' + editLinkClass + '"][href="' + editRoute + '#budget' + '"]', 'Budget'),
+                                    m('a#card_link[class="' + editLinkClass + '"][href="' + editRoute + '#card' + '"]', 'Card Design'),
                                     m('a#dashboard_reward_link[class="' + editLinkClass + '"][href="' + editRoute + '#reward' + '"]', [
-                                        'Recompensas', optionalOpt
+                                        'Rewards', optionalOpt
                                     ]),
-                                    m('a#dashboard_user_about_link[class="' + editLinkClass + '"][href="' + editRoute + '#user_about' + '"]', 'Sobre você'), (project.mode === 'flex' || (project.is_published || project.state === 'approved') || project.is_admin_role ? [
+                                    m('a#dashboard_user_about_link[class="' + editLinkClass + '"][href="' + editRoute + '#user_about' + '"]', 'About You'), (project.mode === 'flex' || (project.is_published || project.state === 'approved') || project.is_admin_role ? [
                                         m('a#dashboard_user_settings_link[class="' + editLinkClass + '"][href="' + editRoute + '#user_settings' + '"]', 'Conta'),
                                     ] : ''), (!project.is_published ? [
                                         m('a#dashboard_preview_link[class="' + editLinkClass + '"][href="' + editRoute + '#preview' + '"]', [
