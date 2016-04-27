@@ -16,35 +16,35 @@ window.c.AdminProjectDetailsCard = ((m, h, moment) => {
                         statusText = {
                             online: {
                                 cssClass: 'text-success',
-                                text: 'NO AR'
+                                text: I18n.t('projects.project.display_status.online')
                             },
                             successful: {
                                 cssClass: 'text-success',
-                                text: 'FINANCIADO'
+                                text: I18n.t('projects.project.display_status.reached_goal')
                             },
                             failed: {
                                 cssClass: 'text-error',
-                                text: 'NÃO FINANCIADO'
+                                text: I18n.t('projects.project.display_status.failed')
                             },
                             waiting_funds: {
                                 cssClass: 'text-waiting',
-                                text: 'AGUARDANDO'
+                                text:  I18n.t('projects.project.display_status.waiting_funds')
                             },
                             rejected: {
                                 cssClass: 'text-error',
-                                text: 'RECUSADO'
+                                text:  I18n.t('projects.project.display_status.rejected')
                             },
                             draft: {
                                 cssClass: '',
-                                text: 'RASCUNHO'
+                                text:  I18n.t('projects.project.display_status.draft')
                             },
                             in_analysis: {
                                 cssClass: '',
-                                text: 'EM ANÁLISE'
+                                text:  I18n.t('projects.project.display_status.in_analysis')
                             },
                             approved: {
                                 cssClass: 'text-success',
-                                text: 'APROVADO'
+                                text: I18n.t('projects.project.display_status.approved')
                             }
                         };
 
